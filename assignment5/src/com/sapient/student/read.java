@@ -1,4 +1,4 @@
-package com.sapient.Int_Arr_Process;
+package com.sapient.student;
 import java.util.Scanner;
 
 public class read {

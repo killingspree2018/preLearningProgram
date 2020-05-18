@@ -1,4 +1,4 @@
-package com.sapient.Matrix;
+package com.sapient.file;
 import java.util.Scanner;
 
 public class read {

@@ -1,0 +1,43 @@
+
+body{
+   margin : auto;
+}
+
+h1{
+   margin: 70px auto 20px auto;
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+  padding: 10px;
+}
+
+main>section {
+    display: none;
+}
+
+nav img{
+  width: 150px;
+  height: 75px;
+}
+
+#Calculator{
+   background-color: grey;
+   margin: auto auto;
+   padding: 50px;
+}
+
+input{
+   display: flex;
+}
+
+button{
+   display : block;
+   margin : 2px;
+}

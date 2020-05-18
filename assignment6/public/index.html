@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Calculator</title>
+
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width">
+       <link rel="manifest" href="/manifest.json">
+       <meta name="theme-color" content="orange">
+
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+       <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase.js"></script>
+       <script>
+
+         var firebaseConfig = {
+
+                apiKey: "AIzaSyDWarO205Oilcd75dhQcUZFOdKCkY08ty8",
+                authDomain: "calculator-bdc40.firebaseapp.com",
+                databaseURL: "https://calculator-bdc40.firebaseio.com",
+                projectId: "calculator-bdc40",
+                storageBucket: "calculator-bdc40.appspot.com",
+                messagingSenderId: "339192783678",
+                appId: "1:339192783678:web:c77ab6ef7d8314ee79826f"
+         };
+
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+       </script>
+
+       <link rel="stylesheet" type="text/css" href="styles.css">
+       <script src="script.js" defer></script>
+   </head>
+   <body> 
+
+      <div class="container">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light" style="margin-bottom: 30px ">
+               <div class="container container-fluid">
+                  <div class="navbar-header">
+                     <a class="navbar-brand" href="/"> <img src="ps-share.png"></a>
+                  </div>
+                   <p>Welcome <span id="userName">User</span></p>
+                 <!-- <div class="collapse navbar-collapse"> -->
+                     <ul class="navbar-nav ml-auto" id="loggedIn">
+                              <li class="nav-item">
+                                 <a class="nav-link"href="#" id="lnkLogOut">Log out</a></p>
+                              </li>
+                     </ul>
+                     <ul class="navbar-nav ml-auto" id="loggedOut">
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#" id="lnkLogIn">Log in</a> 
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#" id="lnkSignUp">Sign Up</a>
+                              </li>  
+                     </ul>
+                  <!-- </div> -->
+               </div>
+            </nav>
+
+         <main>
+
+             <section class="container" id="signup">
+                 <h2>Sign Up For a New Account</h2>
+                 <form onsubmit="return false">
+                     <div class = "form-group">
+                        <label for="label">Name</label>
+                        <input class = "form-control" id="name" placeholder="Enter your full name" required>
+                     </div>
+                      <div class = "form-group">
+                        <label for="email">Email</label>
+                        <input class = "form-control" id="email" type="email" required>
+                     </div>
+                     <div class = "form-group">
+                        <label for="pass">Password</label>
+                        <input class = "form-control" id="pass" type="password" required>
+                     </div>
+                     <div class = "form-group">
+                        <label for="pass2">Confirm Pass</label>
+                        <input class = "form-control" id="pass2" type="password" required>
+                     </div>
+                     
+                     <button class= "btn btn-block btn-success" id="btnSignUp">Sign Up</button>
+                 </form>
+             </section>
+
+             <section class="container" id="login">
+                 <h2>Log In Into Your Account</h2>
+                 <form onsubmit="return false">
+                     <div class = "form-group">
+                         <label for="emailLogin">Email</label>
+                         <input class = "form-control" id="emailLogin" type="email" required>
+                     </div>
+                     <div class = "form-group">
+                         <label for="passLogin">Password</label>
+                         <input class = "form-control" id="passLogin" type="password" required>
+                     </div>
+                     <button class= "btn btn-block btn-success" id="btnLogIn">Log In</button>
+                 </form>
+             </section>
+
+            <h1>Calculator</h1>
+            <section class="container" id= "Calculator">
+
+               <table> 
+                  <div>   
+                     <div class="row"> 
+                        <div class = "col-9" ><input type="text" class="form-control" id="result"></div> 
+                        <div class = "col"><button type="button" class="btn btn-block btn-danger btn-lg" onclick="clr()">Clear</button></div> 
+                     </div> 
+                     <div class="row">  
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="1" onclick="dis('1')">1</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="2" onclick="dis('2')">2</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="3" onclick="dis('3')">3</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-warning btn-lg" value="/" onclick="dis('+')">+</button> </div> 
+                      </div>
+                     <div class="row">  
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="4" onclick="dis('4')">4</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="5" onclick="dis('5')">5</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="6" onclick="dis('6')">6</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-warning btn-lg" value="-" onclick="dis('-')">-</button> </div> 
+                      </div>
+                     <div class="row">  
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="7" onclick="dis('7')">7</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="8" onclick="dis('8')">8</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="9" onclick="dis('9')">9</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-warning btn-lg" value="+" onclick="dis('/')">/</button> </div> 
+                      </div>
+                     <div class="row">  
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="." onclick="dis('.')">.</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-primary btn-lg" value="0" onclick="dis('0')">0</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-success btn-lg" value="=" onclick="solve()">=</button> </div> 
+                        <div class = "col" ><button type="button" class = "btn btn-block btn-warning btn-lg" value="*" onclick="dis('*')">*</button> </div> 
+                     </div>
+                  </div>
+               </table>
+            </section>
+
+
+            
+             <section class="container" id="report">
+                 <hr>
+                 <h2>Report of <span>User</span></h2>
+                 <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Serial No.</th>
+                        <th scope="col">Query</th>
+                        <th scope="col">Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     
+                    </tbody>
+                  </table>
+             </section>
+
+
+         </main>
+ 
+      </div>
+
+   </body>  
+</html> 

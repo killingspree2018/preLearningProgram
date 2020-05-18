@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Calculator</title>
+
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width">
+       <link rel="manifest" href="/manifest.json">
+       <meta name="theme-color" content="orange">
+
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+       <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+       <link rel="stylesheet" type="text/css" href="styles.css">
+       <script src="script.js" defer></script>
+   </head>
+   <body> 
+
+      <div class="container">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light" style="margin-bottom: 30px ">
+               <div class="container container-fluid">
+                  <div class="navbar-header">
+                     <a class="navbar-brand" href="/"> <img src="ps-share.png"></a>
+                  </div>
+               </div>
+            </nav>
+
+         <main>    
+             <section class="container" id="Calculator">
+                 <h2>Enter Two Numbers</h2>
+                     <div class = "form-group">
+                         <label for="Num1">Num1</label>
+                         <input class = "form-control" id="Num1" type="text" required>
+                     </div>
+                     <div class = "form-group">
+                         <label for="Num2">Num2</label>
+                         <input class = "form-control" id="Num2" type="text" required>
+                     </div>
+                     <div class="radio">
+                        <label class="radio"><input type="radio" value="+"  name="operation">Add</label>
+                      </div>
+                      <div class="radio">
+                        <label class="radio"><input type="radio" value="-"  name="operation">Subtract</label>
+                      </div>
+                      <div class="radio">
+                        <label class="radio"><input type="radio" value="*"  name="operation">Multiply</label>
+                      </div>
+                      <div class="radio">
+                        <label class="radio"><input type="radio" value="/"  name="operation">Divide</label>
+                      </div>
+                    <button class= "btn btn-block btn-success" onclick="solve()">Solve</button>
+             </section>
+
+             <section class="container" id="result">
+                
+             </section>
+
+         </main>
+ 
+      </div>
+
+   </body>  
+</html> 

@@ -1,0 +1,2125 @@
+1)	Create a database called mongotest
+2)	Change to mongotest db
+3)	Create collection Employee which has id, fname, salary  array for 12months(jan..dec), city
+4)	Insert data at least 12 data into Employee collection
+
+Sol.
+
+use mongotest
+db.employee.insertMany([
+{
+        "fname" : "Divyansh",
+        "salary" : [
+                {jan: 50000 },
+                {feb: 50000 },
+                {mar: 50000 },
+                {apr: 50000 },
+                {may: 50000 },
+                {jun: 50000 },
+                {jul: 50000 },
+                {aug: 50000 },
+                {sep: 50000 },
+                {oct: 50000 },
+                {nov: 50000 },
+                {dec: 50000 }        
+        ],
+        "city" : "jaipur"
+},
+{
+        "fname" : "Gaurang",
+        "salary" : [
+                {jan: 30000 },
+                {feb: 30000 },
+                {mar: 30000 },
+                {apr: 30000 },
+                {may: 30000 },
+                {jun: 30000 },
+                {jul: 30000 },
+                {aug: 30000 },
+                {sep: 30000 },
+                {oct: 30000 },
+                {nov: 30000 },
+                {dec: 30000 }
+        ],
+        "city" : "gurgoan"
+},
+{
+        "fname" : "Naman",
+         "salary" : [
+                {jan: 70000 },
+                {feb: 70000 },
+                {mar: 70000 },
+                {apr: 70000 },
+                {may: 70000 },
+                {jun: 70000 },
+                {jul: 70000 },
+                {aug: 70000 },
+                {sep: 70000 },
+                {oct: 70000 },
+                {nov: 70000 },
+                {dec: 70000 }
+        ],
+        "city" : "mumbai"
+},
+{
+        "fname" : "Nikunj",
+         "salary" : [
+                {jan: 25000 },
+                {feb: 25000 },
+                {mar: 25000 },
+                {apr: 25000 },
+                {may: 25000 },
+                {jun: 25000 },
+                {jul: 25000 },
+                {aug: 25000 },
+                {sep: 25000 },
+                {oct: 25000 },
+                {nov: 25000 },
+                {dec: 25000 }
+        ],
+        "city" : "Kota"
+},
+{
+        "fname" : "Shivani",
+         "salary" : [
+                {jan: 45000 },
+                {feb: 45000 },
+                {mar: 45000 },
+                {apr: 45000 },
+                {may: 45000 },
+                {jun: 45000 },
+                {jul: 45000 },
+                {aug: 45000 },
+                {sep: 45000 },
+                {oct: 45000 },
+                {nov: 45000 },
+                {dec: 45000 }
+        ],
+        "city" : "pune"
+},
+{
+        "fname" : "Naveen",
+         "salary" : [
+                {jan: 15000 },
+                {feb: 15000 },
+                {mar: 15000 },
+                {apr: 15000 },
+                {may: 15000 },
+                {jun: 15000 },
+                {jul: 15000 },
+                {aug: 15000 },
+                {sep: 15000 },
+                {oct: 15000 },
+                {nov: 15000 },
+                {dec: 15000 }
+        ],
+        "city" : "gurgoan"
+},
+{
+        "fname" : "Kartik",
+         "salary" : [
+                {jan: 55000 },
+                {feb: 55000 },
+                {mar: 55000 },
+                {apr: 55000 },
+                {may: 55000 },
+                {jun: 55000 },
+                {jul: 55000 },
+                {aug: 55000 },
+                {sep: 55000 },
+                {oct: 55000 },
+                {nov: 55000 },
+                {dec: 55000 }
+        ],
+        "city" : "Banglore"
+},
+{
+        "fname" : "Ankit",
+         "salary" : [
+                {jan: 20000 },
+                {feb: 20000 },
+                {mar: 20000 },
+                {apr: 20000 },
+                {may: 20000 },
+                {jun: 20000 },
+                {jul: 20000 },
+                {aug: 20000 },
+                {sep: 20000 },
+                {oct: 20000 },
+                {nov: 20000 },
+                {dec: 20000 }
+        ],
+        "city" : "gurgoan"
+},
+{
+        "fname" : "Saurabh",
+         "salary" : [
+                {jan: 18000 },
+                {feb: 18000 },
+                {mar: 18000 },
+                {apr: 18000 },
+                {may: 18000 },
+                {jun: 18000 },
+                {jul: 18000 },
+                {aug: 18000 },
+                {sep: 18000 },
+                {oct: 18000 },
+                {nov: 18000 },
+                {dec: 18000 }
+        ],
+        "city" : "noida"
+},
+{
+        "fname" : "Priyansh",
+         "salary" : [
+                {jan: 35000 },
+                {feb: 35000 },
+                {mar: 35000 },
+                {apr: 35000 },
+                {may: 35000 },
+                {jun: 35000 },
+                {jul: 35000 },
+                {aug: 35000 },
+                {sep: 35000 },
+                {oct: 35000 },
+                {nov: 35000 },
+                {dec: 35000 }
+        ],
+        "city" : "pune"
+},
+{
+        "fname" : "Saurav",
+         "salary" : [
+                {jan: 10000 },
+                {feb: 10000 },
+                {mar: 10000 },
+                {apr: 10000 },
+                {may: 10000 },
+                {jun: 10000 },
+                {jul: 10000 },
+                {aug: 10000 },
+                {sep: 10000 },
+                {oct: 10000 },
+                {nov: 10000 },
+                {dec: 10000 }
+        ],
+        "city" : "jaipur"
+},
+{
+        "fname" : "Rahul",
+         "salary" : [
+                {jan: 40000 },
+                {feb: 40000 },
+                {mar: 40000 },
+                {apr: 40000 },
+                {may: 40000 },
+                {jun: 40000 },
+                {jul: 40000 },
+                {aug: 40000 },
+                {sep: 40000 },
+                {oct: 40000 },
+                {nov: 40000 },
+                {dec: 40000 }
+        ],
+        "city" : "noida"
+}
+])
+
+Q1 to display all the documents in the collection.  
+
+Sol.
+
+db.employee.find()
+{ "_id" : ObjectId("5e980081c939dc0f97e8df67"), "fname" : "Divyansh", "salary" : [ { "jan" : 50000 }, { "feb" : 50000 }, { "mar" : 50000 }, { "apr" : 50000 }, { "may" : 50000 }, { "jun" : 50000 }, { "jul" : 50000 }, { "aug" : 50000 }, { "sep" : 50000 }, { "oct" : 50000 }, { "nov" : 50000 }, { "dec" : 50000 } ], "city" : "jaipur" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df68"), "fname" : "Gaurang", "salary" : [ { "jan" : 30000 }, { "feb" : 30000 }, { "mar" : 30000 }, { "apr" : 30000 }, { "may" : 30000 }, { "jun" : 30000 }, { "jul" : 30000 }, { "aug" : 30000 }, { "sep" : 30000 }, { "oct" : 30000 }, { "nov" : 30000 }, { "dec" : 30000 } ], "city" : "gurgoan" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df69"), "fname" : "Naman", "salary" : [ { "jan" : 70000 }, { "feb" : 70000 }, { "mar" : 70000 }, { "apr" : 70000 }, { "may" : 70000 }, { "jun" : 70000 }, { "jul" : 70000 }, { "aug" : 70000 }, { "sep" : 70000 }, { "oct" : 70000 }, { "nov" : 70000 }, { "dec" : 70000 } ], "city" : "mumbai" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6a"), "fname" : "Nikunj", "salary" : [ { "jan" : 25000 }, { "feb" : 25000 }, { "mar" : 25000 }, { "apr" : 25000 }, { "may" : 25000 }, { "jun" : 25000 }, { "jul" : 25000 }, { "aug" : 25000 }, { "sep" : 25000 }, { "oct" : 25000 }, { "nov" : 25000 }, { "dec" : 25000 } ], "city" : "Kota" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6b"), "fname" : "Shivani", "salary" : [ { "jan" : 45000 }, { "feb" : 45000 }, { "mar" : 45000 }, { "apr" : 45000 }, { "may" : 45000 }, { "jun" : 45000 }, { "jul" : 45000 }, { "aug" : 45000 }, { "sep" : 45000 }, { "oct" : 45000 }, { "nov" : 45000 }, { "dec" : 45000 } ], "city" : "pune" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6c"), "fname" : "Naveen", "salary" : [ { "jan" : 15000 }, { "feb" : 15000 }, { "mar" : 15000 }, { "apr" : 15000 }, { "may" : 15000 }, { "jun" : 15000 }, { "jul" : 15000 }, { "aug" : 15000 }, { "sep" : 15000 }, { "oct" : 15000 }, { "nov" : 15000 }, { "dec" : 15000 } ], "city" : "gurgoan" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6d"), "fname" : "Kartik", "salary" : [ { "jan" : 55000 }, { "feb" : 55000 }, { "mar" : 55000 }, { "apr" : 55000 }, { "may" : 55000 }, { "jun" : 55000 }, { "jul" : 55000 }, { "aug" : 55000 }, { "sep" : 55000 }, { "oct" : 55000 }, { "nov" : 55000 }, { "dec" : 55000 } ], "city" : "Banglore" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6e"), "fname" : "Ankit", "salary" : [ { "jan" : 20000 }, { "feb" : 20000 }, { "mar" : 20000 }, { "apr" : 20000 }, { "may" : 20000 }, { "jun" : 20000 }, { "jul" : 20000 }, { "aug" : 20000 }, { "sep" : 20000 }, { "oct" : 20000 }, { "nov" : 20000 }, { "dec" : 20000 } ], "city" : "gurgoan" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6f"), "fname" : "Saurabh", "salary" : [ { "jan" : 18000 }, { "feb" : 18000 }, { "mar" : 18000 }, { "apr" : 18000 }, { "may" : 18000 }, { "jun" : 18000 }, { "jul" : 18000 }, { "aug" : 18000 }, { "sep" : 18000 }, { "oct" : 18000 }, { "nov" : 18000 }, { "dec" : 18000 } ], "city" : "noida" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df70"), "fname" : "Priyansh", "salary" : [ { "jan" : 35000 }, { "feb" : 35000 }, { "mar" : 35000 }, { "apr" : 35000 }, { "may" : 35000 }, { "jun" : 35000 }, { "jul" : 35000 }, { "aug" : 35000 }, { "sep" : 35000 }, { "oct" : 35000 }, { "nov" : 35000 }, { "dec" : 35000 } ], "city" : "pune" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df71"), "fname" : "Saurav", "salary" : [ { "jan" : 10000 }, { "feb" : 10000 }, { "mar" : 10000 }, { "apr" : 10000 }, { "may" : 10000 }, { "jun" : 10000 }, { "jul" : 10000 }, { "aug" : 10000 }, { "sep" : 10000 }, { "oct" : 10000 }, { "nov" : 10000 }, { "dec" : 10000 } ], "city" : "jaipur" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df72"), "fname" : "Rahul", "salary" : [ { "jan" : 40000 }, { "feb" : 40000 }, { "mar" : 40000 }, { "apr" : 40000 }, { "may" : 40000 }, { "jun" : 40000 }, { "jul" : 40000 }, { "aug" : 40000 }, { "sep" : 40000 }, { "oct" : 40000 }, { "nov" : 40000 }, { "dec" : 40000 } ], "city" : "noida" }
+
+or
+
+db.employee.find().pretty()
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df67"),
+        "fname" : "Divyansh",
+        "salary" : [
+                {
+                        "jan" : 50000
+                },
+                {
+                        "feb" : 50000
+                },
+                {
+                        "mar" : 50000
+                },
+                {
+                        "apr" : 50000
+                },
+                {
+                        "may" : 50000
+                },
+                {
+                        "jun" : 50000
+                },
+                {
+                        "jul" : 50000
+                },
+                {
+                        "aug" : 50000
+                },
+                {
+                        "sep" : 50000
+                },
+                {
+                        "oct" : 50000
+                },
+                {
+                        "nov" : 50000
+                },
+                {
+                        "dec" : 50000
+                }
+        ],
+        "city" : "jaipur"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df68"),
+        "fname" : "Gaurang",
+        "salary" : [
+                {
+                        "jan" : 30000
+                },
+                {
+                        "feb" : 30000
+                },
+                {
+                        "mar" : 30000
+                },
+                {
+                        "apr" : 30000
+                },
+                {
+                        "may" : 30000
+                },
+                {
+                        "jun" : 30000
+                },
+                {
+                        "jul" : 30000
+                },
+                {
+                        "aug" : 30000
+                },
+                {
+                        "sep" : 30000
+                },
+                {
+                        "oct" : 30000
+                },
+                {
+                        "nov" : 30000
+                },
+                {
+                        "dec" : 30000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df69"),
+        "fname" : "Naman",
+        "salary" : [
+                {
+                        "jan" : 70000
+                },
+                {
+                        "feb" : 70000
+                },
+                {
+                        "mar" : 70000
+                },
+                {
+                        "apr" : 70000
+                },
+                {
+                        "may" : 70000
+                },
+                {
+                        "jun" : 70000
+                },
+                {
+                        "jul" : 70000
+                },
+                {
+                        "aug" : 70000
+                },
+                {
+                        "sep" : 70000
+                },
+                {
+                        "oct" : 70000
+                },
+                {
+                        "nov" : 70000
+                },
+                {
+                        "dec" : 70000
+                }
+        ],
+        "city" : "mumbai"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6a"),
+        "fname" : "Nikunj",
+        "salary" : [
+                {
+                        "jan" : 25000
+                },
+                {
+                        "feb" : 25000
+                },
+                {
+                        "mar" : 25000
+                },
+                {
+                        "apr" : 25000
+                },
+                {
+                        "may" : 25000
+                },
+                {
+                        "jun" : 25000
+                },
+                {
+                        "jul" : 25000
+                },
+                {
+                        "aug" : 25000
+                },
+                {
+                        "sep" : 25000
+                },
+                {
+                        "oct" : 25000
+                },
+                {
+                        "nov" : 25000
+                },
+                {
+                        "dec" : 25000
+                }
+        ],
+        "city" : "Kota"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6b"),
+        "fname" : "Shivani",
+        "salary" : [
+                {
+                        "jan" : 45000
+                },
+                {
+                        "feb" : 45000
+                },
+                {
+                        "mar" : 45000
+                },
+                {
+                        "apr" : 45000
+                },
+                {
+                        "may" : 45000
+                },
+                {
+                        "jun" : 45000
+                },
+                {
+                        "jul" : 45000
+                },
+                {
+                        "aug" : 45000
+                },
+                {
+                        "sep" : 45000
+                },
+                {
+                        "oct" : 45000
+                },
+                {
+                        "nov" : 45000
+                },
+                {
+                        "dec" : 45000
+                }
+        ],
+        "city" : "pune"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6c"),
+        "fname" : "Naveen",
+        "salary" : [
+                {
+                        "jan" : 15000
+                },
+                {
+                        "feb" : 15000
+                },
+                {
+                        "mar" : 15000
+                },
+                {
+                        "apr" : 15000
+                },
+                {
+                        "may" : 15000
+                },
+                {
+                        "jun" : 15000
+                },
+                {
+                        "jul" : 15000
+                },
+                {
+                        "aug" : 15000
+                },
+                {
+                        "sep" : 15000
+                },
+                {
+                        "oct" : 15000
+                },
+                {
+                        "nov" : 15000
+                },
+                {
+                        "dec" : 15000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6d"),
+        "fname" : "Kartik",
+        "salary" : [
+                {
+                        "jan" : 55000
+                },
+                {
+                        "feb" : 55000
+                },
+                {
+                        "mar" : 55000
+                },
+                {
+                        "apr" : 55000
+                },
+                {
+                        "may" : 55000
+                },
+                {
+                        "jun" : 55000
+                },
+                {
+                        "jul" : 55000
+                },
+                {
+                        "aug" : 55000
+                },
+                {
+                        "sep" : 55000
+                },
+                {
+                        "oct" : 55000
+                },
+                {
+                        "nov" : 55000
+                },
+                {
+                        "dec" : 55000
+                }
+        ],
+        "city" : "Banglore"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6e"),
+        "fname" : "Ankit",
+        "salary" : [
+                {
+                        "jan" : 20000
+                },
+                {
+                        "feb" : 20000
+                },
+                {
+                        "mar" : 20000
+                },
+                {
+                        "apr" : 20000
+                },
+                {
+                        "may" : 20000
+                },
+                {
+                        "jun" : 20000
+                },
+                {
+                        "jul" : 20000
+                },
+                {
+                        "aug" : 20000
+                },
+                {
+                        "sep" : 20000
+                },
+                {
+                        "oct" : 20000
+                },
+                {
+                        "nov" : 20000
+                },
+                {
+                        "dec" : 20000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6f"),
+        "fname" : "Saurabh",
+        "salary" : [
+                {
+                        "jan" : 18000
+                },
+                {
+                        "feb" : 18000
+                },
+                {
+                        "mar" : 18000
+                },
+                {
+                        "apr" : 18000
+                },
+                {
+                        "may" : 18000
+                },
+                {
+                        "jun" : 18000
+                },
+                {
+                        "jul" : 18000
+                },
+                {
+                        "aug" : 18000
+                },
+                {
+                        "sep" : 18000
+                },
+                {
+                        "oct" : 18000
+                },
+                {
+                        "nov" : 18000
+                },
+                {
+                        "dec" : 18000
+                }
+        ],
+        "city" : "noida"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df70"),
+        "fname" : "Priyansh",
+        "salary" : [
+                {
+                        "jan" : 35000
+                },
+                {
+                        "feb" : 35000
+                },
+                {
+                        "mar" : 35000
+                },
+                {
+                        "apr" : 35000
+                },
+                {
+                        "may" : 35000
+                },
+                {
+                        "jun" : 35000
+                },
+                {
+                        "jul" : 35000
+                },
+                {
+                        "aug" : 35000
+                },
+                {
+                        "sep" : 35000
+                },
+                {
+                        "oct" : 35000
+                },
+                {
+                        "nov" : 35000
+                },
+                {
+                        "dec" : 35000
+                }
+        ],
+        "city" : "pune"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df71"),
+        "fname" : "Saurav",
+        "salary" : [
+                {
+                        "jan" : 10000
+                },
+                {
+                        "feb" : 10000
+                },
+                {
+                        "mar" : 10000
+                },
+                {
+                        "apr" : 10000
+                },
+                {
+                        "may" : 10000
+                },
+                {
+                        "jun" : 10000
+                },
+                {
+                        "jul" : 10000
+                },
+                {
+                        "aug" : 10000
+                },
+                {
+                        "sep" : 10000
+                },
+                {
+                        "oct" : 10000
+                },
+                {
+                        "nov" : 10000
+                },
+                {
+                        "dec" : 10000
+                }
+        ],
+        "city" : "jaipur"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df72"),
+        "fname" : "Rahul",
+        "salary" : [
+                {
+                        "jan" : 40000
+                },
+                {
+                        "feb" : 40000
+                },
+                {
+                        "mar" : 40000
+                },
+                {
+                        "apr" : 40000
+                },
+                {
+                        "may" : 40000
+                },
+                {
+                        "jun" : 40000
+                },
+                {
+                        "jul" : 40000
+                },
+                {
+                        "aug" : 40000
+                },
+                {
+                        "sep" : 40000
+                },
+                {
+                        "oct" : 40000
+                },
+                {
+                        "nov" : 40000
+                },
+                {
+                        "dec" : 40000
+                }
+        ],
+        "city" : "noida"
+}
+
+Q2 .   to display the fields _id, fname  for all the documents in the collection.
+
+Sol.
+
+db.employee.find({}, {fname: 1})
+{ "_id" : ObjectId("5e980081c939dc0f97e8df67"), "fname" : "Divyansh" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df68"), "fname" : "Gaurang" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df69"), "fname" : "Naman" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6a"), "fname" : "Nikunj" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6b"), "fname" : "Shivani" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6c"), "fname" : "Naveen" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6d"), "fname" : "Kartik" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6e"), "fname" : "Ankit" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6f"), "fname" : "Saurabh" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df70"), "fname" : "Priyansh" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df71"), "fname" : "Saurav" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df72"), "fname" : "Rahul" }
+
+Q3 to display the all fields but exclude the field id for all the documents in the collection.
+
+Sol.
+
+db.employee.find({}, {_id: 0})
+{ "fname" : "Divyansh", "salary" : [ { "jan" : 50000 }, { "feb" : 50000 }, { "mar" : 50000 }, { "apr" : 50000 }, { "may" : 50000 }, { "jun" : 50000 }, { "jul" : 50000 }, { "aug" : 50000 }, { "sep" : 50000 }, { "oct" : 50000 }, { "nov" : 50000 }, { "dec" : 50000 } ], "city" : "jaipur" }
+{ "fname" : "Gaurang", "salary" : [ { "jan" : 30000 }, { "feb" : 30000 }, { "mar" : 30000 }, { "apr" : 30000 }, { "may" : 30000 }, { "jun" : 30000 }, { "jul" : 30000 }, { "aug" : 30000 }, { "sep" : 30000 }, { "oct" : 30000 }, { "nov" : 30000 }, { "dec" : 30000 } ], "city" : "gurgoan" }
+{ "fname" : "Naman", "salary" : [ { "jan" : 70000 }, { "feb" : 70000 }, { "mar" : 70000 }, { "apr" : 70000 }, { "may" : 70000 }, { "jun" : 70000 }, { "jul" : 70000 }, { "aug" : 70000 }, { "sep" : 70000 }, { "oct" : 70000 }, { "nov" : 70000 }, { "dec" : 70000 } ], "city" : "mumbai" }
+{ "fname" : "Nikunj", "salary" : [ { "jan" : 25000 }, { "feb" : 25000 }, { "mar" : 25000 }, { "apr" : 25000 }, { "may" : 25000 }, { "jun" : 25000 }, { "jul" : 25000 }, { "aug" : 25000 }, { "sep" : 25000 }, { "oct" : 25000 }, { "nov" : 25000 }, { "dec" : 25000 } ], "city" : "Kota" }
+{ "fname" : "Shivani", "salary" : [ { "jan" : 45000 }, { "feb" : 45000 }, { "mar" : 45000 }, { "apr" : 45000 }, { "may" : 45000 }, { "jun" : 45000 }, { "jul" : 45000 }, { "aug" : 45000 }, { "sep" : 45000 }, { "oct" : 45000 }, { "nov" : 45000 }, { "dec" : 45000 } ], "city" : "pune" }
+{ "fname" : "Naveen", "salary" : [ { "jan" : 15000 }, { "feb" : 15000 }, { "mar" : 15000 }, { "apr" : 15000 }, { "may" : 15000 }, { "jun" : 15000 }, { "jul" : 15000 }, { "aug" : 15000 }, { "sep" : 15000 }, { "oct" : 15000 }, { "nov" : 15000 }, { "dec" : 15000 } ], "city" : "gurgoan" }
+{ "fname" : "Kartik", "salary" : [ { "jan" : 55000 }, { "feb" : 55000 }, { "mar" : 55000 }, { "apr" : 55000 }, { "may" : 55000 }, { "jun" : 55000 }, { "jul" : 55000 }, { "aug" : 55000 }, { "sep" : 55000 }, { "oct" : 55000 }, { "nov" : 55000 }, { "dec" : 55000 } ], "city" : "Banglore" }
+{ "fname" : "Ankit", "salary" : [ { "jan" : 20000 }, { "feb" : 20000 }, { "mar" : 20000 }, { "apr" : 20000 }, { "may" : 20000 }, { "jun" : 20000 }, { "jul" : 20000 }, { "aug" : 20000 }, { "sep" : 20000 }, { "oct" : 20000 }, { "nov" : 20000 }, { "dec" : 20000 } ], "city" : "gurgoan" }
+{ "fname" : "Saurabh", "salary" : [ { "jan" : 18000 }, { "feb" : 18000 }, { "mar" : 18000 }, { "apr" : 18000 }, { "may" : 18000 }, { "jun" : 18000 }, { "jul" : 18000 }, { "aug" : 18000 }, { "sep" : 18000 }, { "oct" : 18000 }, { "nov" : 18000 }, { "dec" : 18000 } ], "city" : "noida" }
+{ "fname" : "Priyansh", "salary" : [ { "jan" : 35000 }, { "feb" : 35000 }, { "mar" : 35000 }, { "apr" : 35000 }, { "may" : 35000 }, { "jun" : 35000 }, { "jul" : 35000 }, { "aug" : 35000 }, { "sep" : 35000 }, { "oct" : 35000 }, { "nov" : 35000 }, { "dec" : 35000 } ], "city" : "pune" }
+{ "fname" : "Saurav", "salary" : [ { "jan" : 10000 }, { "feb" : 10000 }, { "mar" : 10000 }, { "apr" : 10000 }, { "may" : 10000 }, { "jun" : 10000 }, { "jul" : 10000 }, { "aug" : 10000 }, { "sep" : 10000 }, { "oct" : 10000 }, { "nov" : 10000 }, { "dec" : 10000 } ], "city" : "jaipur" }
+{ "fname" : "Rahul", "salary" : [ { "jan" : 40000 }, { "feb" : 40000 }, { "mar" : 40000 }, { "apr" : 40000 }, { "may" : 40000 }, { "jun" : 40000 }, { "jul" : 40000 }, { "aug" : 40000 }, { "sep" : 40000 }, { "oct" : 40000 }, { "nov" : 40000 }, { "dec" : 40000 } ], "city" : "noida" }
+
+or
+
+db.employee.find({}, {_id: 0}).pretty()
+{
+        "fname" : "Divyansh",
+        "salary" : [
+                {
+                        "jan" : 50000
+                },
+                {
+                        "feb" : 50000
+                },
+                {
+                        "mar" : 50000
+                },
+                {
+                        "apr" : 50000
+                },
+                {
+                        "may" : 50000
+                },
+                {
+                        "jun" : 50000
+                },
+                {
+                        "jul" : 50000
+                },
+                {
+                        "aug" : 50000
+                },
+                {
+                        "sep" : 50000
+                },
+                {
+                        "oct" : 50000
+                },
+                {
+                        "nov" : 50000
+                },
+                {
+                        "dec" : 50000
+                }
+        ],
+        "city" : "jaipur"
+}
+{
+        "fname" : "Gaurang",
+        "salary" : [
+                {
+                        "jan" : 30000
+                },
+                {
+                        "feb" : 30000
+                },
+                {
+                        "mar" : 30000
+                },
+                {
+                        "apr" : 30000
+                },
+                {
+                        "may" : 30000
+                },
+                {
+                        "jun" : 30000
+                },
+                {
+                        "jul" : 30000
+                },
+                {
+                        "aug" : 30000
+                },
+                {
+                        "sep" : 30000
+                },
+                {
+                        "oct" : 30000
+                },
+                {
+                        "nov" : 30000
+                },
+                {
+                        "dec" : 30000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "fname" : "Naman",
+        "salary" : [
+                {
+                        "jan" : 70000
+                },
+                {
+                        "feb" : 70000
+                },
+                {
+                        "mar" : 70000
+                },
+                {
+                        "apr" : 70000
+                },
+                {
+                        "may" : 70000
+                },
+                {
+                        "jun" : 70000
+                },
+                {
+                        "jul" : 70000
+                },
+                {
+                        "aug" : 70000
+                },
+                {
+                        "sep" : 70000
+                },
+                {
+                        "oct" : 70000
+                },
+                {
+                        "nov" : 70000
+                },
+                {
+                        "dec" : 70000
+                }
+        ],
+        "city" : "mumbai"
+}
+{
+        "fname" : "Nikunj",
+        "salary" : [
+                {
+                        "jan" : 25000
+                },
+                {
+                        "feb" : 25000
+                },
+                {
+                        "mar" : 25000
+                },
+                {
+                        "apr" : 25000
+                },
+                {
+                        "may" : 25000
+                },
+                {
+                        "jun" : 25000
+                },
+                {
+                        "jul" : 25000
+                },
+                {
+                        "aug" : 25000
+                },
+                {
+                        "sep" : 25000
+                },
+                {
+                        "oct" : 25000
+                },
+                {
+                        "nov" : 25000
+                },
+                {
+                        "dec" : 25000
+                }
+        ],
+        "city" : "Kota"
+}
+{
+        "fname" : "Shivani",
+        "salary" : [
+                {
+                        "jan" : 45000
+                },
+                {
+                        "feb" : 45000
+                },
+                {
+                        "mar" : 45000
+                },
+                {
+                        "apr" : 45000
+                },
+                {
+                        "may" : 45000
+                },
+                {
+                        "jun" : 45000
+                },
+                {
+                        "jul" : 45000
+                },
+                {
+                        "aug" : 45000
+                },
+                {
+                        "sep" : 45000
+                },
+                {
+                        "oct" : 45000
+                },
+                {
+                        "nov" : 45000
+                },
+                {
+                        "dec" : 45000
+                }
+        ],
+        "city" : "pune"
+}
+{
+        "fname" : "Naveen",
+        "salary" : [
+                {
+                        "jan" : 15000
+                },
+                {
+                        "feb" : 15000
+                },
+                {
+                        "mar" : 15000
+                },
+                {
+                        "apr" : 15000
+                },
+                {
+                        "may" : 15000
+                },
+                {
+                        "jun" : 15000
+                },
+                {
+                        "jul" : 15000
+                },
+                {
+                        "aug" : 15000
+                },
+                {
+                        "sep" : 15000
+                },
+                {
+                        "oct" : 15000
+                },
+                {
+                        "nov" : 15000
+                },
+                {
+                        "dec" : 15000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "fname" : "Kartik",
+        "salary" : [
+                {
+                        "jan" : 55000
+                },
+                {
+                        "feb" : 55000
+                },
+                {
+                        "mar" : 55000
+                },
+                {
+                        "apr" : 55000
+                },
+                {
+                        "may" : 55000
+                },
+                {
+                        "jun" : 55000
+                },
+                {
+                        "jul" : 55000
+                },
+                {
+                        "aug" : 55000
+                },
+                {
+                        "sep" : 55000
+                },
+                {
+                        "oct" : 55000
+                },
+                {
+                        "nov" : 55000
+                },
+                {
+                        "dec" : 55000
+                }
+        ],
+        "city" : "Banglore"
+}
+{
+        "fname" : "Ankit",
+        "salary" : [
+                {
+                        "jan" : 20000
+                },
+                {
+                        "feb" : 20000
+                },
+                {
+                        "mar" : 20000
+                },
+                {
+                        "apr" : 20000
+                },
+                {
+                        "may" : 20000
+                },
+                {
+                        "jun" : 20000
+                },
+                {
+                        "jul" : 20000
+                },
+                {
+                        "aug" : 20000
+                },
+                {
+                        "sep" : 20000
+                },
+                {
+                        "oct" : 20000
+                },
+                {
+                        "nov" : 20000
+                },
+                {
+                        "dec" : 20000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "fname" : "Saurabh",
+        "salary" : [
+                {
+                        "jan" : 18000
+                },
+                {
+                        "feb" : 18000
+                },
+                {
+                        "mar" : 18000
+                },
+                {
+                        "apr" : 18000
+                },
+                {
+                        "may" : 18000
+                },
+                {
+                        "jun" : 18000
+                },
+                {
+                        "jul" : 18000
+                },
+                {
+                        "aug" : 18000
+                },
+                {
+                        "sep" : 18000
+                },
+                {
+                        "oct" : 18000
+                },
+                {
+                        "nov" : 18000
+                },
+                {
+                        "dec" : 18000
+                }
+        ],
+        "city" : "noida"
+}
+{
+        "fname" : "Priyansh",
+        "salary" : [
+                {
+                        "jan" : 35000
+                },
+                {
+                        "feb" : 35000
+                },
+                {
+                        "mar" : 35000
+                },
+                {
+                        "apr" : 35000
+                },
+                {
+                        "may" : 35000
+                },
+                {
+                        "jun" : 35000
+                },
+                {
+                        "jul" : 35000
+                },
+                {
+                        "aug" : 35000
+                },
+                {
+                        "sep" : 35000
+                },
+                {
+                        "oct" : 35000
+                },
+                {
+                        "nov" : 35000
+                },
+                {
+                        "dec" : 35000
+                }
+        ],
+        "city" : "pune"
+}
+{
+        "fname" : "Saurav",
+        "salary" : [
+                {
+                        "jan" : 10000
+                },
+                {
+                        "feb" : 10000
+                },
+                {
+                        "mar" : 10000
+                },
+                {
+                        "apr" : 10000
+                },
+                {
+                        "may" : 10000
+                },
+                {
+                        "jun" : 10000
+                },
+                {
+                        "jul" : 10000
+                },
+                {
+                        "aug" : 10000
+                },
+                {
+                        "sep" : 10000
+                },
+                {
+                        "oct" : 10000
+                },
+                {
+                        "nov" : 10000
+                },
+                {
+                        "dec" : 10000
+                }
+        ],
+        "city" : "jaipur"
+}
+{
+        "fname" : "Rahul",
+        "salary" : [
+                {
+                        "jan" : 40000
+                },
+                {
+                        "feb" : 40000
+                },
+                {
+                        "mar" : 40000
+                },
+                {
+                        "apr" : 40000
+                },
+                {
+                        "may" : 40000
+                },
+                {
+                        "jun" : 40000
+                },
+                {
+                        "jul" : 40000
+                },
+                {
+                        "aug" : 40000
+                },
+                {
+                        "sep" : 40000
+                },
+                {
+                        "oct" : 40000
+                },
+                {
+                        "nov" : 40000
+                },
+                {
+                        "dec" : 40000
+                }
+        ],
+        "city" : "noida"
+}
+
+Q4 to display the first 5 Employees  
+
+Sol.
+
+db.employee.find({}).limit(5)
+{ "_id" : ObjectId("5e980081c939dc0f97e8df67"), "fname" : "Divyansh", "salary" : [ { "jan" : 50000 }, { "feb" : 50000 }, { "mar" : 50000 }, { "apr" : 50000 }, { "may" : 50000 }, { "jun" : 50000 }, { "jul" : 50000 }, { "aug" : 50000 }, { "sep" : 50000 }, { "oct" : 50000 }, { "nov" : 50000 }, { "dec" : 50000 } ], "city" : "jaipur" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df68"), "fname" : "Gaurang", "salary" : [ { "jan" : 30000 }, { "feb" : 30000 }, { "mar" : 30000 }, { "apr" : 30000 }, { "may" : 30000 }, { "jun" : 30000 }, { "jul" : 30000 }, { "aug" : 30000 }, { "sep" : 30000 }, { "oct" : 30000 }, { "nov" : 30000 }, { "dec" : 30000 } ], "city" : "gurgoan" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df69"), "fname" : "Naman", "salary" : [ { "jan" : 70000 }, { "feb" : 70000 }, { "mar" : 70000 }, { "apr" : 70000 }, { "may" : 70000 }, { "jun" : 70000 }, { "jul" : 70000 }, { "aug" : 70000 }, { "sep" : 70000 }, { "oct" : 70000 }, { "nov" : 70000 }, { "dec" : 70000 } ], "city" : "mumbai" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6a"), "fname" : "Nikunj", "salary" : [ { "jan" : 25000 }, { "feb" : 25000 }, { "mar" : 25000 }, { "apr" : 25000 }, { "may" : 25000 }, { "jun" : 25000 }, { "jul" : 25000 }, { "aug" : 25000 }, { "sep" : 25000 }, { "oct" : 25000 }, { "nov" : 25000 }, { "dec" : 25000 } ], "city" : "Kota" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6b"), "fname" : "Shivani", "salary" : [ { "jan" : 45000 }, { "feb" : 45000 }, { "mar" : 45000 }, { "apr" : 45000 }, { "may" : 45000 }, { "jun" : 45000 }, { "jul" : 45000 }, { "aug" : 45000 }, { "sep" : 45000 }, { "oct" : 45000 }, { "nov" : 45000 }, { "dec" : 45000 } ], "city" : "pune" }
+
+or
+
+db.employee.find({}).limit(5).pretty()
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df67"),
+        "fname" : "Divyansh",
+        "salary" : [
+                {
+                        "jan" : 50000
+                },
+                {
+                        "feb" : 50000
+                },
+                {
+                        "mar" : 50000
+                },
+                {
+                        "apr" : 50000
+                },
+                {
+                        "may" : 50000
+                },
+                {
+                        "jun" : 50000
+                },
+                {
+                        "jul" : 50000
+                },
+                {
+                        "aug" : 50000
+                },
+                {
+                        "sep" : 50000
+                },
+                {
+                        "oct" : 50000
+                },
+                {
+                        "nov" : 50000
+                },
+                {
+                        "dec" : 50000
+                }
+        ],
+        "city" : "jaipur"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df68"),
+        "fname" : "Gaurang",
+        "salary" : [
+                {
+                        "jan" : 30000
+                },
+                {
+                        "feb" : 30000
+                },
+                {
+                        "mar" : 30000
+                },
+                {
+                        "apr" : 30000
+                },
+                {
+                        "may" : 30000
+                },
+                {
+                        "jun" : 30000
+                },
+                {
+                        "jul" : 30000
+                },
+                {
+                        "aug" : 30000
+                },
+                {
+                        "sep" : 30000
+                },
+                {
+                        "oct" : 30000
+                },
+                {
+                        "nov" : 30000
+                },
+                {
+                        "dec" : 30000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df69"),
+        "fname" : "Naman",
+        "salary" : [
+                {
+                        "jan" : 70000
+                },
+                {
+                        "feb" : 70000
+                },
+                {
+                        "mar" : 70000
+                },
+                {
+                        "apr" : 70000
+                },
+                {
+                        "may" : 70000
+                },
+                {
+                        "jun" : 70000
+                },
+                {
+                        "jul" : 70000
+                },
+                {
+                        "aug" : 70000
+                },
+                {
+                        "sep" : 70000
+                },
+                {
+                        "oct" : 70000
+                },
+                {
+                        "nov" : 70000
+                },
+                {
+                        "dec" : 70000
+                }
+        ],
+        "city" : "mumbai"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6a"),
+        "fname" : "Nikunj",
+        "salary" : [
+                {
+                        "jan" : 25000
+                },
+                {
+                        "feb" : 25000
+                },
+                {
+                        "mar" : 25000
+                },
+                {
+                        "apr" : 25000
+                },
+                {
+                        "may" : 25000
+                },
+                {
+                        "jun" : 25000
+                },
+                {
+                        "jul" : 25000
+                },
+                {
+                        "aug" : 25000
+                },
+                {
+                        "sep" : 25000
+                },
+                {
+                        "oct" : 25000
+                },
+                {
+                        "nov" : 25000
+                },
+                {
+                        "dec" : 25000
+                }
+        ],
+        "city" : "Kota"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6b"),
+        "fname" : "Shivani",
+        "salary" : [
+                {
+                        "jan" : 45000
+                },
+                {
+                        "feb" : 45000
+                },
+                {
+                        "mar" : 45000
+                },
+                {
+                        "apr" : 45000
+                },
+                {
+                        "may" : 45000
+                },
+                {
+                        "jun" : 45000
+                },
+                {
+                        "jul" : 45000
+                },
+                {
+                        "aug" : 45000
+                },
+                {
+                        "sep" : 45000
+                },
+                {
+                        "oct" : 45000
+                },
+                {
+                        "nov" : 45000
+                },
+                {
+                        "dec" : 45000
+                }
+        ],
+        "city" : "pune"
+}
+
+Q5 to display the next 5 Employees after skipping first 5  
+
+Sol.
+
+db.employee.find({}).skip(5).limit(5)
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6c"), "fname" : "Naveen", "salary" : [ { "jan" : 15000 }, { "feb" : 15000 }, { "mar" : 15000 }, { "apr" : 15000 }, { "may" : 15000 }, { "jun" : 15000 }, { "jul" : 15000 }, { "aug" : 15000 }, { "sep" : 15000 }, { "oct" : 15000 }, { "nov" : 15000 }, { "dec" : 15000 } ], "city" : "gurgoan" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6d"), "fname" : "Kartik", "salary" : [ { "jan" : 55000 }, { "feb" : 55000 }, { "mar" : 55000 }, { "apr" : 55000 }, { "may" : 55000 }, { "jun" : 55000 }, { "jul" : 55000 }, { "aug" : 55000 }, { "sep" : 55000 }, { "oct" : 55000 }, { "nov" : 55000 }, { "dec" : 55000 } ], "city" : "Banglore" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6e"), "fname" : "Ankit", "salary" : [ { "jan" : 20000 }, { "feb" : 20000 }, { "mar" : 20000 }, { "apr" : 20000 }, { "may" : 20000 }, { "jun" : 20000 }, { "jul" : 20000 }, { "aug" : 20000 }, { "sep" : 20000 }, { "oct" : 20000 }, { "nov" : 20000 }, { "dec" : 20000 } ], "city" : "gurgoan" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6f"), "fname" : "Saurabh", "salary" : [ { "jan" : 18000 }, { "feb" : 18000 }, { "mar" : 18000 }, { "apr" : 18000 }, { "may" : 18000 }, { "jun" : 18000 }, { "jul" : 18000 }, { "aug" : 18000 }, { "sep" : 18000 }, { "oct" : 18000 }, { "nov" : 18000 }, { "dec" : 18000 } ], "city" : "noida" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df70"), "fname" : "Priyansh", "salary" : [ { "jan" : 35000 }, { "feb" : 35000 }, { "mar" : 35000 }, { "apr" : 35000 }, { "may" : 35000 }, { "jun" : 35000 }, { "jul" : 35000 }, { "aug" : 35000 }, { "sep" : 35000 }, { "oct" : 35000 }, { "nov" : 35000 }, { "dec" : 35000 } ], "city" : "pune" }
+
+or
+
+db.employee.find({}).skip(5).limit(5).pretty()
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6c"),
+        "fname" : "Naveen",
+        "salary" : [
+                {
+                        "jan" : 15000
+                },
+                {
+                        "feb" : 15000
+                },
+                {
+                        "mar" : 15000
+                },
+                {
+                        "apr" : 15000
+                },
+                {
+                        "may" : 15000
+                },
+                {
+                        "jun" : 15000
+                },
+                {
+                        "jul" : 15000
+                },
+                {
+                        "aug" : 15000
+                },
+                {
+                        "sep" : 15000
+                },
+                {
+                        "oct" : 15000
+                },
+                {
+                        "nov" : 15000
+                },
+                {
+                        "dec" : 15000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6d"),
+        "fname" : "Kartik",
+        "salary" : [
+                {
+                        "jan" : 55000
+                },
+                {
+                        "feb" : 55000
+                },
+                {
+                        "mar" : 55000
+                },
+                {
+                        "apr" : 55000
+                },
+                {
+                        "may" : 55000
+                },
+                {
+                        "jun" : 55000
+                },
+                {
+                        "jul" : 55000
+                },
+                {
+                        "aug" : 55000
+                },
+                {
+                        "sep" : 55000
+                },
+                {
+                        "oct" : 55000
+                },
+                {
+                        "nov" : 55000
+                },
+                {
+                        "dec" : 55000
+                }
+        ],
+        "city" : "Banglore"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6e"),
+        "fname" : "Ankit",
+        "salary" : [
+                {
+                        "jan" : 20000
+                },
+                {
+                        "feb" : 20000
+                },
+                {
+                        "mar" : 20000
+                },
+                {
+                        "apr" : 20000
+                },
+                {
+                        "may" : 20000
+                },
+                {
+                        "jun" : 20000
+                },
+                {
+                        "jul" : 20000
+                },
+                {
+                        "aug" : 20000
+                },
+                {
+                        "sep" : 20000
+                },
+                {
+                        "oct" : 20000
+                },
+                {
+                        "nov" : 20000
+                },
+                {
+                        "dec" : 20000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6f"),
+        "fname" : "Saurabh",
+        "salary" : [
+                {
+                        "jan" : 18000
+                },
+                {
+                        "feb" : 18000
+                },
+                {
+                        "mar" : 18000
+                },
+                {
+                        "apr" : 18000
+                },
+                {
+                        "may" : 18000
+                },
+                {
+                        "jun" : 18000
+                },
+                {
+                        "jul" : 18000
+                },
+                {
+                        "aug" : 18000
+                },
+                {
+                        "sep" : 18000
+                },
+                {
+                        "oct" : 18000
+                },
+                {
+                        "nov" : 18000
+                },
+                {
+                        "dec" : 18000
+                }
+        ],
+        "city" : "noida"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df70"),
+        "fname" : "Priyansh",
+        "salary" : [
+                {
+                        "jan" : 35000
+                },
+                {
+                        "feb" : 35000
+                },
+                {
+                        "mar" : 35000
+                },
+                {
+                        "apr" : 35000
+                },
+                {
+                        "may" : 35000
+                },
+                {
+                        "jun" : 35000
+                },
+                {
+                        "jul" : 35000
+                },
+                {
+                        "aug" : 35000
+                },
+                {
+                        "sep" : 35000
+                },
+                {
+                        "oct" : 35000
+                },
+                {
+                        "nov" : 35000
+                },
+                {
+                        "dec" : 35000
+                }
+        ],
+        "city" : "pune"
+}
+
+Q6 to find the Employee who stay in Gurgaon city 
+
+Sol.
+
+db.employee.find({city: "gurgoan"})
+{ "_id" : ObjectId("5e980081c939dc0f97e8df68"), "fname" : "Gaurang", "salary" : [ { "jan" : 30000 }, { "feb" : 30000 }, { "mar" : 30000 }, { "apr" : 30000 }, { "may" : 30000 }, { "jun" : 30000 }, { "jul" : 30000 }, { "aug" : 30000 }, { "sep" : 30000 }, { "oct" : 30000 }, { "nov" : 30000 }, { "dec" : 30000 } ], "city" : "gurgoan" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6c"), "fname" : "Naveen", "salary" : [ { "jan" : 15000 }, { "feb" : 15000 }, { "mar" : 15000 }, { "apr" : 15000 }, { "may" : 15000 }, { "jun" : 15000 }, { "jul" : 15000 }, { "aug" : 15000 }, { "sep" : 15000 }, { "oct" : 15000 }, { "nov" : 15000 }, { "dec" : 15000 } ], "city" : "gurgoan" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6e"), "fname" : "Ankit", "salary" : [ { "jan" : 20000 }, { "feb" : 20000 }, { "mar" : 20000 }, { "apr" : 20000 }, { "may" : 20000 }, { "jun" : 20000 }, { "jul" : 20000 }, { "aug" : 20000 }, { "sep" : 20000 }, { "oct" : 20000 }, { "nov" : 20000 }, { "dec" : 20000 } ], "city" : "gurgoan" }
+
+or
+
+db.employee.find({city: "gurgoan"}).pretty()
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df68"),
+        "fname" : "Gaurang",
+        "salary" : [
+                {
+                        "jan" : 30000
+                },
+                {
+                        "feb" : 30000
+                },
+                {
+                        "mar" : 30000
+                },
+                {
+                        "apr" : 30000
+                },
+                {
+                        "may" : 30000
+                },
+                {
+                        "jun" : 30000
+                },
+                {
+                        "jul" : 30000
+                },
+                {
+                        "aug" : 30000
+                },
+                {
+                        "sep" : 30000
+                },
+                {
+                        "oct" : 30000
+                },
+                {
+                        "nov" : 30000
+                },
+                {
+                        "dec" : 30000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6c"),
+        "fname" : "Naveen",
+        "salary" : [
+                {
+                        "jan" : 15000
+                },
+                {
+                        "feb" : 15000
+                },
+                {
+                        "mar" : 15000
+                },
+                {
+                        "apr" : 15000
+                },
+                {
+                        "may" : 15000
+                },
+                {
+                        "jun" : 15000
+                },
+                {
+                        "jul" : 15000
+                },
+                {
+                        "aug" : 15000
+                },
+                {
+                        "sep" : 15000
+                },
+                {
+                        "oct" : 15000
+                },
+                {
+                        "nov" : 15000
+                },
+                {
+                        "dec" : 15000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6e"),
+        "fname" : "Ankit",
+        "salary" : [
+                {
+                        "jan" : 20000
+                },
+                {
+                        "feb" : 20000
+                },
+                {
+                        "mar" : 20000
+                },
+                {
+                        "apr" : 20000
+                },
+                {
+                        "may" : 20000
+                },
+                {
+                        "jun" : 20000
+                },
+                {
+                        "jul" : 20000
+                },
+                {
+                        "aug" : 20000
+                },
+                {
+                        "sep" : 20000
+                },
+                {
+                        "oct" : 20000
+                },
+                {
+                        "nov" : 20000
+                },
+                {
+                        "dec" : 20000
+                }
+        ],
+        "city" : "gurgoan"
+}
+
+Q7 to find the Employee who jan salary is less than 20000
+
+Sol.
+
+db.employee.find({"salary.0.jan": {$lt: 20000}})
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6c"), "fname" : "Naveen", "salary" : [ { "jan" : 15000 }, { "feb" : 15000 }, { "mar" : 15000 }, { "apr" : 15000 }, { "may" : 15000 }, { "jun" : 15000 }, { "jul" : 15000 }, { "aug" : 15000 }, { "sep" : 15000 }, { "oct" : 15000 }, { "nov" : 15000 }, { "dec" : 15000 } ], "city" : "gurgoan" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6f"), "fname" : "Saurabh", "salary" : [ { "jan" : 18000 }, { "feb" : 18000 }, { "mar" : 18000 }, { "apr" : 18000 }, { "may" : 18000 }, { "jun" : 18000 }, { "jul" : 18000 }, { "aug" : 18000 }, { "sep" : 18000 }, { "oct" : 18000 }, { "nov" : 18000 }, { "dec" : 18000 } ], "city" : "noida" }
+{ "_id" : ObjectId("5e980081c939dc0f97e8df71"), "fname" : "Saurav", "salary" : [ { "jan" : 10000 }, { "feb" : 10000 }, { "mar" : 10000 }, { "apr" : 10000 }, { "may" : 10000 }, { "jun" : 10000 }, { "jul" : 10000 }, { "aug" : 10000 }, { "sep" : 10000 }, { "oct" : 10000 }, { "nov" : 10000 }, { "dec" : 10000 } ], "city" : "jaipur" }
+
+
+or
+
+db.employee.find({"salary.0.jan": {$lt: 20000}}).pretty()
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6c"),
+        "fname" : "Naveen",
+        "salary" : [
+                {
+                        "jan" : 15000
+                },
+                {
+                        "feb" : 15000
+                },
+                {
+                        "mar" : 15000
+                },
+                {
+                        "apr" : 15000
+                },
+                {
+                        "may" : 15000
+                },
+                {
+                        "jun" : 15000
+                },
+                {
+                        "jul" : 15000
+                },
+                {
+                        "aug" : 15000
+                },
+                {
+                        "sep" : 15000
+                },
+                {
+                        "oct" : 15000
+                },
+                {
+                        "nov" : 15000
+                },
+                {
+                        "dec" : 15000
+                }
+        ],
+        "city" : "gurgoan"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6f"),
+        "fname" : "Saurabh",
+        "salary" : [
+                {
+                        "jan" : 18000
+                },
+                {
+                        "feb" : 18000
+                },
+                {
+                        "mar" : 18000
+                },
+                {
+                        "apr" : 18000
+                },
+                {
+                        "may" : 18000
+                },
+                {
+                        "jun" : 18000
+                },
+                {
+                        "jul" : 18000
+                },
+                {
+                        "aug" : 18000
+                },
+                {
+                        "sep" : 18000
+                },
+                {
+                        "oct" : 18000
+                },
+                {
+                        "nov" : 18000
+                },
+                {
+                        "dec" : 18000
+                }
+        ],
+        "city" : "noida"
+}
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df71"),
+        "fname" : "Saurav",
+        "salary" : [
+                {
+                        "jan" : 10000
+                },
+                {
+                        "feb" : 10000
+                },
+                {
+                        "mar" : 10000
+                },
+                {
+                        "apr" : 10000
+                },
+                {
+                        "may" : 10000
+                },
+                {
+                        "jun" : 10000
+                },
+                {
+                        "jul" : 10000
+                },
+                {
+                        "aug" : 10000
+                },
+                {
+                        "sep" : 10000
+                },
+                {
+                        "oct" : 10000
+                },
+                {
+                        "nov" : 10000
+                },
+                {
+                        "dec" : 10000
+                }
+        ],
+        "city" : "jaipur"
+}
+
+Q8 to find the Employee who jan salary is less than 20000 and who stay in Gurgaon city.
+
+Sol.
+
+db.employee.find({city: "gurgoan", "salary.0.jan": {$lt: 20000}})
+{ "_id" : ObjectId("5e980081c939dc0f97e8df6c"), "fname" : "Naveen", "salary" : [ { "jan" : 15000 }, { "feb" : 15000 }, { "mar" : 15000 }, { "apr" : 15000 }, { "may" : 15000 }, { "jun" : 15000 }, { "jul" : 15000 }, { "aug" : 15000 }, { "sep" : 15000 }, { "oct" : 15000 }, { "nov" : 15000 }, { "dec" : 15000 } ], "city" : "gurgoan" }
+
+or
+
+db.employee.find({city: "gurgoan", "salary.0.jan": {$lt: 20000}}).pretty()
+{
+        "_id" : ObjectId("5e980081c939dc0f97e8df6c"),
+        "fname" : "Naveen",
+        "salary" : [
+                {
+                        "jan" : 15000
+                },
+                {
+                        "feb" : 15000
+                },
+                {
+                        "mar" : 15000
+                },
+                {
+                        "apr" : 15000
+                },
+                {
+                        "may" : 15000
+                },
+                {
+                        "jun" : 15000
+                },
+                {
+                        "jul" : 15000
+                },
+                {
+                        "aug" : 15000
+                },
+                {
+                        "sep" : 15000
+                },
+                {
+                        "oct" : 15000
+                },
+                {
+                        "nov" : 15000
+                },
+                {
+                        "dec" : 15000
+                }
+        ],
+        "city" : "gurgoan"
+}
+
+Q9 to find the total salary of jan month for all the employee.
+
+Sol.
+
+db.employee.aggregate([{$unwind: '$salary'},{$group: {_id: null, "totalSalary": {$sum: "$salary.jan"}}}])
+{ "_id" : null, "totalSalary" : 413000 }
+
+
+Q10 count how any employee stay in Gurgaon city.
+
+Sol.
+
+db.employee.find({city: "gurgoan"}).count()
+3
+
+
+

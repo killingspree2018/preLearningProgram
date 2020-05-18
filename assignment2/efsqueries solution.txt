@@ -1,0 +1,251 @@
+1.Write a query which displays the module code and the duration for modules whose duration is less than 6.
+
+SELECT modulecode, duration FROM MODULES
+WHERE duration<6;
+
+ modulecode | duration
+------------+----------
+ JAV-1      |        3
+ JAV-3      |        3
+ JAV-6      |        4
+ JAV-7      |        3
+ WEB-1      |        4
+
+
+
+2.Write a query which will display the BATCHCODE, TRAINERID, COURSECODE, STARTDATE, CAPACITY 
+and BATCHSTRENGTH of the batches handled by the trainer KRISHNAN.
+
+SELECT batchcode, batches.trainerid, coursecode, startdate, capacity, batchstrength
+FROM batches INNER JOIN trainers 
+ON (batches.trainerid = trainers.trainerid)
+WHERE trainername = 'KRISHNAN' ;
+
+ batchcode | trainerid | coursecode | startdate  | capacity | batchstrength
+-----------+-----------+------------+------------+----------+---------------
+      3003 |       703 |        303 | 2012-01-02 |       10 |            10
+      3005 |       703 |        300 | 2011-01-02 |        5 |             5
+      3009 |       703 |        202 | 2012-07-09 |       10 |             5
+
+
+
+3.Write a query which displays all the module names of the course code 100.
+
+SELECT modulename 
+From courseandmodules INNER JOIN modules
+ON courseandmodules.modulecode = modules.modulecode
+WHERE courseandmodules.coursecode = 100;
+
+ modulename
+------------
+ OOAD
+ CORE JAVA
+ JUNIT
+
+
+
+4.Write a query which displays the module names and course code for the course code 100.
+
+SELECT courseandmodules.coursecode, modulename 
+From courseandmodules INNER JOIN modules
+ON courseandmodules.modulecode = modules.modulecode
+WHERE courseandmodules.coursecode = 100;
+
+ coursecode | modulename
+------------+------------
+        100 | OOAD
+        100 | CORE JAVA
+        100 | JUNIT
+
+
+5."Write a query which will display the number of modules present in the course code 100. 
+<br/>
+Hint: display module name count with alias""NumberofModules"""
+
+SELECT COUNT(modulecode) as NumberofModules
+From courseandmodules
+WHERE coursecode = 100;
+
+ numberofmodules
+-----------------
+               3
+
+
+6."Write a query which will display all the course code and the number of modules present 
+in that particular course.
+Hint: display module name count with alias""NumberofModules"""
+
+SELECT coursecode, COUNT(modulecode) as NumberofModules
+From courseandmodules
+GROUP BY coursecode;
+
+ coursecode | numberofmodules
+------------+-----------------
+        101 |               3
+        200 |               1
+        202 |               2
+        201 |               2
+        100 |               3
+        203 |               4
+
+
+
+7.Write a query which will display the course title and fees which has the maximum fees.
+
+SELECT title, fees
+FROM courses
+WHERE fees = (SELECT MAX(fees) from courses);
+
+   title    | fees
+------------+-------
+ Oracle DBA | 34500
+
+
+8.Write a query which will display the student id, student name, batch code, place and 
+phone number of the students who belongs to Batch '3001'.
+
+SELECT studentid, studentname, batchcode, place,  phone
+FROM students
+WHERE batchcode = 3001;
+
+ studentid | studentname | batchcode |  place  |   phone
+-----------+-------------+-----------+---------+------------
+      1001 | SANKAR      |      3001 | CHENNAI | 9373737374
+      1002 | UMA         |      3001 | CHENNAI | 9373737374
+      1007 | MAHAL       |      3001 | CHENNAI | 9078737373
+      1011 | KUMARAN     |      3001 | CHENNAI | 9393737377
+      1020 | SANGEETHA   |      3001 | MADURAI | 9373737374
+      1013 | SAI         |      3001 | CHENNAI | 9373737374
+
+
+
+9.Write a Query which will display the student ID, Student name, Batch code, place and phone number who are from CHENNAI.
+
+SELECT studentid, studentname, batchcode, place,  phone
+FROM students
+WHERE place = 'CHENNAI';
+
+ studentid | studentname | batchcode |  place  |   phone
+-----------+-------------+-----------+---------+------------
+      1001 | SANKAR      |      3001 | CHENNAI | 9373737374
+      1002 | UMA         |      3001 | CHENNAI | 9373737374
+      1003 | BANU        |      3002 | CHENNAI | 9373737364
+      1006 | SOMU        |      3003 | CHENNAI | 9143737374
+      1007 | MAHAL       |      3001 | CHENNAI | 9078737373
+      1008 | AMIR        |      3003 | CHENNAI | 8373737374
+      1009 | VINOTH      |      3004 | CHENNAI | 9973737370
+      1011 | KUMARAN     |      3001 | CHENNAI | 9393737377
+      1012 | AMIR        |      3003 | CHENNAI | 9370737374
+      1014 | JOHN        |      3005 | CHENNAI | 9070737374
+      1015 | JAMMAL      |      3005 | CHENNAI | 9670737373
+      1016 | MOHAMED     |      3004 | CHENNAI | 9373737372
+      1018 | BANISH      |      3003 | CHENNAI | 9373737374
+      1019 | DAN         |      3002 | CHENNAI | 9373737374
+      1013 | SAI         |      3001 | CHENNAI | 9373737374
+      1001 | SANKAR      |      3004 | CHENNAI | 9073037376
+
+
+
+10.Write a query which displays the total number of modules which has less than 6 days duration. 
+<BR>Hint: display total number of modules with'LESSTHANSIXDAYS' as alias.
+
+SELECT COUNT(modulecode) as LESSTHANSIXDAYS
+FROM MODULES
+WHERE duration<6;
+
+ lessthansixdays
+-----------------
+               5
+
+
+11.Write a query to display the batch code, course title, start date of the batches for the month of May and year 2012.
+
+SELECT batchcode, title, startdate
+FROM batches INNER JOIN courses 
+ON (batches.coursecode = courses.coursecode)
+WHERE startdate > '2012-05-01' and startdate < '2012-05-30' ;
+
+ batchcode |   title    | startdate
+-----------+------------+------------
+      3010 | Oracle DBA | 2012-05-06
+
+12.Write a query to display courses code, course title, course fees of the courses for which 
+no batches/training has been planned in the month of January and year 2012.
+
+SELECT courses.coursecode, title, fees
+FROM courses FULL JOIN batches
+ON (batches.coursecode = courses.coursecode)
+WHERE courses.coursecode  NOT IN (
+				   SELECT coursecode
+				   FROM batches
+				   WHERE startdate >= '2012-01-01' and startdate <= '2012-01-30'
+                     		  );
+
+ coursecode |                 title                  | fees
+------------+----------------------------------------+-------
+        200 | Oracle Sql Expert                      |  6500
+        301 | Asp .net certification c#              | 12000
+        300 | DotNet 4.0 using C Sharp Certification |  8000
+        201 | Oracle Developer                       | 12000
+        203 | Oracle Data Ware Housing               | 24500
+        202 | Oracle DBA                             | 34500
+        202 | Oracle DBA                             | 34500
+        202 | Oracle DBA                             | 34500
+        101 | Certificed Java Web Developer          | 12500
+        302 | Microsoft Developer                    | 30000
+
+
+
+13.Write a query which displays the names of all the modules of the course titled 'Oracle DBA'
+
+SELECT modulename
+From courseandmodules INNER JOIN modules
+ON courseandmodules.modulecode = modules.modulecode
+WHERE courseandmodules.coursecode = (
+					SELECT coursecode 
+					From courses
+					WHERE title = 'Oracle DBA'
+				    );
+
+     modulename
+--------------------
+ DBA
+ PERFORMANCE TUNING
+
+
+
+14.Write a Query which displays the student ID, Student name, Batch code, place and phone number 
+of the student's who took training from CHENNAI in the year 2012.
+
+SELECT studentid, studentname, students.batchcode, place,  phone, startdate
+FROM students INNER JOIN batches
+ON students.batchcode = batches.batchcode
+WHERE place = 'CHENNAI' and startdate >= '2012-01-01' and startdate <= '2012-12-30';
+
+ studentid | studentname | batchcode |  place  |   phone    | startdate
+-----------+-------------+-----------+---------+------------+------------
+      1001 | SANKAR      |      3001 | CHENNAI | 9373737374 | 2012-01-02
+      1002 | UMA         |      3001 | CHENNAI | 9373737374 | 2012-01-02
+      1006 | SOMU        |      3003 | CHENNAI | 9143737374 | 2012-01-02
+      1007 | MAHAL       |      3001 | CHENNAI | 9078737373 | 2012-01-02
+      1008 | AMIR        |      3003 | CHENNAI | 8373737374 | 2012-01-02
+      1011 | KUMARAN     |      3001 | CHENNAI | 9393737377 | 2012-01-02
+      1012 | AMIR        |      3003 | CHENNAI | 9370737374 | 2012-01-02
+      1018 | BANISH      |      3003 | CHENNAI | 9373737374 | 2012-01-02
+      1013 | SAI         |      3001 | CHENNAI | 9373737374 | 2012-01-02
+
+
+
+15.Write a query which will display the student id, student names who are enrolled for the course code 200?
+
+SELECT studentid, studentname
+FROM students INNER JOIN batches
+ON students.batchcode = batches.batchcode
+WHERE batches.coursecode = 200;
+
+ studentid | studentname
+-----------+-------------
+      1003 | BANU
+      1004 | BALAN
+      1005 | HAMEED
+      1019 | DAN

@@ -3,11 +3,11 @@ package com.sapient.thread;
 public class threadRunner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Tic tic = new Tic();
+		
+		Game ob = new Game();
+		Tic tic = new Tic(ob);
 		tic.start();
-		tic.setPriority(10);
-		Tok tok = new Tok();
+		Tok tok = new Tok(ob);
 		tok.start();
 		
 	}
